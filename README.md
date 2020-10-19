@@ -3,11 +3,11 @@
 This is a course project on building a mock course website, it allows user to sign in as student/instructor to perfrom operations.
 
 ## how to use
-download all the files
+1. download all the files
 
-go to folder templates
+2. Navigate to folder templates
 
-open index.html
+3. open index.html
 
 ## Files
 assignment3.db contains necessary informations of accounts/grades etc.
