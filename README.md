@@ -4,7 +4,9 @@ This is a course project on building a mock course website, it allows user to si
 
 ## how to use
 download all the files
+
 go to folder templates
+
 open index.html
 
 ## Files
