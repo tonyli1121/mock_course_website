@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- import styles from .css files, there should be another .css file imported that is done on 4/8 for sign in style -->
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+	<link rel="stylesheet" type="text/css" href="../static/account.css">
+    <title>sign_in</title>
+</head>
+
+<title>sign_in</title>
+<body>
+<div class="page-section">
+	<!-- BANNER of page -->
+	<img src="../static/banner.jpg">
+
+	<!-- HEADER of the page -->
+	<div class="link-container">
+    	<div class="link_home">
+        	<a href="index.html"><button class="head-anchor" type="button">Home</button></a>
+   		</div>
+    	<div class="link_news">
+        	<a href="sign_in"><button class="head-anchor" type="button">News</button></a>
+    	</div>
+	    <div class="link_lecture">
+	        <a href = "sign_in"><button class="head-anchor" type="button">Lecture</button></a>
+	    </div>
+	    <div class="link_course-works">
+	        <a href = "sign_in"><button class="head-anchor" type="button">Course Works</button></a>
+	    </div>
+	    <div class="link_resources">
+	        <a href="sign_in"><button class="head-anchor" type="button">Resources</button></a>
+   		</div>
+	</div>
+	
+	<hr>
+	<!-- ================================================ -->
+	<!-- sign in box for user to interact with -->
+    <form method="POST" action="/sign_in">
+    <div class="container">
+        <h1> Sign in </h1>
+        <h2> you have no permission to the pages unless you sign in as a student or instructor</h2>
+        <hr>
+
+        <!-- input box for user to interact with -->
+        <label for="id"><b>Username</b></label>
+        <input type="text" placeholder="Please enter your id" name="id" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Please enter Password" name="password" required>
+
+        <button type="submit" class="submit">Log In</button>
+    </div>
+    
+    <!-- for user who does not have an account -->
+      <div class="container signin">
+        <p>Does not have an account? click here to <a href="register">register</a>.</p>
+        <!-- the app.py file will check whether or not the user is valid and redirect to instructor / user -->
+      </div>
+  	</form>
+    
+    <!-- footer of the page -->
+    <div class="footer-container">
+        <p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+        <p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+    </div>
+</div>
+</body>
+</html>

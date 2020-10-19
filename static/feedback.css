@@ -1,0 +1,9 @@
+h2 {
+	text-align: center;
+}
+
+.feedbackbox {
+	width: 60%;
+	height: 200px;
+	word-wrap: normal;
+}

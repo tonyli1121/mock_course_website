@@ -1,0 +1,10 @@
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  font-family: "Verdana", sans-serif;
+   font-size: 15px;
+}

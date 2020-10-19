@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- import styles from .css files -->
+	<link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+	<link rel = "stylesheet" href = "../static/student_grades.css">
+	<link rel = "stylesheet" href = "../static/instructor_grades.css">
+    <script src="../static/js/instructor_grades.js"></script>
+	<title>Instructor Grades</title>
+</head>
+
+<body>
+<div class="page-section">
+	<!-- BANNER of page -->
+	<img src="../static/banner.jpg">
+
+
+	<!-- header of the page -->
+	<div class="link-container">
+    	<div class="link_home">
+        	<a href="instructor_index.html"><button class="head-anchor" type="button">Home</button></a>
+   		</div>
+    	<div class="link_news">
+        	<a href="instructor_grade.html"><button class="head-anchor" type="button">Grades</button></a>
+    	</div>
+	    <div class="link_lecture">
+	        <a href = "instructor_regrade_requests.html"><button class="head-anchor" type="button">Regrade requests</button></a>
+	    </div>
+		<div class="link_resources">
+	        <a href="instructor_feedback.html"><button class="head-anchor" type="button">Feedback</button></a>
+   		</div>
+	    <div class="link_resources">
+	        <a href="instructor_news.html"><button class="head-anchor" type="button">News</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_lecture.html"><button class="head-anchor" type="button">Lecture</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_courseworks.html"><button class="head-anchor" type="button">Course Works</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_resources.html"><button class="head-anchor" type="button">Resources</button></a>
+   		</div>
+	</div>
+		<p><strong>{{get_flashed_messages()[0]}}</strong></p>
+        <button class="head-anchor" type="button" onclick="clickNewGrade()">add grade</button>
+        <form method="POST" action="/instructor_grade" class="newgrade" id="newgradeform">
+            <p><strong>StudentID:</strong></p>
+                <textarea id="student" name="student" required></textarea>
+
+            <p><strong>CourseID:</strong></p>
+                <textarea id="course" name="course" required></textarea>
+
+            <p><strong>Grade title:</strong></p>
+                <textarea id="title" name="title" required></textarea>
+
+            <p><strong>Full score:</strong></p>
+                <textarea id="full" name="full" required></textarea>
+
+            <p><strong>Grade:</strong></p>
+                <textarea id="grade" name="grade" required></textarea>
+
+            <button class="head-anchor" type="submit">confirm</button>
+        </form>
+
+	<!-- ACTUAL CONTENTS -->
+	<h1>Student Grades</h1>
+
+	<div class="grades-container">
+        {%for i in range(0, grades_num)%}
+    	    <div class="grades-box">
+                <div class="grades-info">
+                    <div class="gtitle"><b>{{grades[i][2]}} {{grades[i][5]}}</b></div>
+                    <div class="ginfo">{{grades[i][1]}}
+                    </div>
+                </div>
+                <div class="grades-grade">
+                    {{grades[i][4]}}/{{grades[i][3]}} <br/>
+                </div>
+                <div class="grades-remark">
+                </div>
+            </div>
+            <div class="break"></div>
+		{%endfor%}
+	</div>
+
+	<div class="footer-container">
+		<a href="index.html">log out</a>
+		<p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+		<p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+	</div>
+</div>
+</body>
+</html>

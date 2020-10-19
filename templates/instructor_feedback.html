@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Import styles from .css files -->
+	<link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+	<link rel = "stylesheet" href = "../static/student_grades.css">
+    <script src="../static/js/instructor_feedback.js"></script>
+	<!-- title of the web page -->
+	<title>Instructor Feedbacks</title>
+</head>
+
+<body>
+<div class="page-section">
+	<!-- BANNER of page -->
+	<img src="../static/banner.jpg">
+
+
+	<!-- header of the page -->
+	<div class="link-container">
+    	<div class="link_home">
+        	<a href="instructor_index.html"><button class="head-anchor" type="button">Home</button></a>
+   		</div>
+    	<div class="link_news">
+        	<a href="instructor_grade.html"><button class="head-anchor" type="button">Grades</button></a>
+    	</div>
+	    <div class="link_lecture">
+	        <a href = "instructor_regrade_requests.html"><button class="head-anchor" type="button">Regrade requests</button></a>
+	    </div>
+		<div class="link_resources">
+	        <a href="instructor_feedback.html"><button class="head-anchor" type="button">Feedback</button></a>
+   		</div>
+	    <div class="link_resources">
+	        <a href="instructor_news.html"><button class="head-anchor" type="button">News</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_lecture.html"><button class="head-anchor" type="button">Lecture</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_courseworks.html"><button class="head-anchor" type="button">Course Works</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_resources.html"><button class="head-anchor" type="button">Resources</button></a>
+   		</div>
+	</div>
+
+	<!-- ACTUAL CONTENTS -->
+	<h1>Feedbacks</h1>
+	
+	<div class="grades-container">
+		{%for i in range(0, feedbacks_num)%}
+            <div class="grades-box">
+                <div class="grades-info">
+                    <div class="gtitle"><b>feedback {{i}}</b></div>
+                    <div class="ginfo">{{feedbacks[i][5]}}</div>
+                    <div class="newgrade" id="feedback{{i}}">
+                        <p><strong>What do you like about the instructor teaching?</strong></p>
+                        <p>{{feedbacks[i][1]}}</p>
+
+                        <p><strong>What do you recommend the instructor to improve their teaching?</strong></p>
+                        <p>{{feedbacks[i][2]}}</p>
+
+                        <p><strong>What do you like about the labs?</strong></p>
+                        <p>{{feedbacks[i][3]}}</p>
+
+                        <p><strong>What do you recommend the lab instructors to do to improve their lab teaching?</strong></p>
+                        <p>{{feedbacks[i][4]}}</p>
+                    </div>
+                </div>
+                <div class="grades-remark">
+                    <button id="button{{i}}" class="head-anchor" onclick="show({{i}})" type="button">show feedback</button>
+                </div>
+            </div>
+        {%endfor%}
+		<div class="break"></div>
+		
+	</div>
+
+	<div class="footer-container">
+		<a href="index.html">log out</a>
+		<p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+		<p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+	</div>
+</div>
+</body>
+</html>

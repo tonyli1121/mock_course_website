@@ -1,0 +1,55 @@
+body {
+    font-family: "Verdana", sans-serif;
+}
+
+.course-anchor {
+    text-align: center;
+}
+
+.assignment-section {
+    padding-left: 20px;
+}
+
+.lab-row {
+
+    display: flex;
+    text-align: center;
+    font-family: "Verdana", sans-serif;
+    font-size: 15px;
+    padding-right: 20%;
+}
+
+.lab-row-head {
+
+    display: flex;
+    text-align: center;
+    font-family: "Verdana", sans-serif;
+    font-size: 20px;
+    padding-right: 20%;
+    font-weight: bold;
+}
+
+.lab-row_week{
+    padding: 4px;
+    border-right: 2px dotted #999999;
+    border-bottom: 2px solid #999999;
+    flex:1;
+    order:1;
+}
+
+.lab-row_lab{
+    padding: 4px;
+    border-right: 2px dotted #999999;
+    border-bottom: 2px solid #999999;
+    flex:2;
+    order:2;
+}
+
+.lab-row_solutions{
+    padding: 4px;
+    border-bottom: 2px solid #999999;
+    flex:2;
+    order:3;
+}
+
+a:hover {  color: #EEEEEE;}

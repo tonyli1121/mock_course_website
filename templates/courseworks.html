@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- import the styles from .css files-->
+    <link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+    <link rel="stylesheet" type="text/css" href="../static/coursework.css">
+    <meta charset="UTF-8">
+    <title>Course Works</title>
+</head>
+<body>
+<div class="page-section">
+
+    <img src="../static/banner.jpg">
+
+    <!-- header of page -->
+    <div class="link-container">
+        <div class="link_home">
+            <a href="index.html"><button class="head-anchor" type="button">Home</button></a>
+        </div>
+        <div class="link_news">
+            <a href="news.html"><button class="head-anchor" type="button">News</button></a>
+        </div>
+        <div class="link_lecture">
+            <a href = "lecture.html"><button class="head-anchor" type="button">Lecture</button></a>
+        </div>
+        <div class="link_course-works">
+            <a href = "courseworks.html"><button class="head-anchor" type="button">Course Works</button></a>
+        </div>
+        <div class="link_resources">
+            <a href="resources.html"><button class="head-anchor" type="button">Resources</button></a>
+        </div>
+    </div>
+
+    <!-- ACTUAL CONTENT -->
+    <!-- each of the three hyper link will direct user to coressponding position -->
+
+    <div class="course-anchor">
+        <h3><a href="#lab">Labs</a>  &#183;  <a href="#assignment">Assignments</a>  &#183;  <a href="#test">Tests</a></h3>
+    </div>
+    <hr>
+    <a id="lab"></a><h1>Labs</h1>
+    <h2>Sections</h2>
+    <p>Please go the tutorial section that you signed up for on ROSI. </p>
+    <h2>Exercises</h2>
+    <p>This section contains the tutorial exercises.</p>
+    <p>Tutorials are held every week. The first tutorial week is week 2. Please make use of this valuable resource! </p>
+
+
+
+    <!-- tutorial table outer div -> row
+                        inner div->col -->
+
+    <div class="lab-row-head">
+        <div class="lab-row_week">
+            Week
+        </div>
+        <div class="lab-row_lab">
+            Lab
+        </div>
+        <div class="lab-row_solutions">
+            Solutions
+        </div>
+    </div>
+
+    <div class="lab-row">
+        <div class="lab-row_week">
+            2
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Python, Command line</a>
+        </div>
+        <div class="lab-row_solutions">
+            None
+        </div>
+    </div>
+
+    <!-- the codes above should display a table something like this
+        -------------------------
+        |       |       |        |
+        | Week  |  lab  |solution|
+        |       |       |        |
+        --------------------------
+        |       | python|        |
+        |   2   |command|  None  |
+        |       |  line |        |
+        --------------------------
+    -->
+
+    <div class="lab-row">
+        <div class="lab-row_week">
+            3
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a>
+        </div>
+        <div class="lab-row_solutions">
+            None
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            4
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a> <a href="../static/sample.pdf">university.sql</a>
+        </div>
+        <div class="lab-row_solutions">
+            <a href="../static/sample.pdf">query_solns</a>
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            5
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a>
+        </div>
+        <div class="lab-row_solutions">
+            <a href="../static/sample.pdf">Solns</a>
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            6
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a>
+        </div>
+        <div class="lab-row_solutions">
+            <a href="../static/sample.pdf">Solns</a>
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            7
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a>
+        </div>
+        <div class="lab-row_solutions">
+            None
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            8
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a>
+        </div>
+        <div class="lab-row_solutions">
+            None
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            9
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">Handout</a>
+        </div>
+        <div class="lab-row_solutions">
+            None
+        </div>
+    </div>
+    <div class="lab-row">
+        <div class="lab-row_week">
+            10
+        </div>
+        <div class="lab-row_lab">
+            <a href="../static/sample.pdf">W3 tutorial</a>
+        </div>
+        <div class="lab-row_solutions">
+            Work through the tutorial for jQuery up until jQuery Remove.
+        </div>
+    </div>
+    <hr>
+    <a id="assignment"></a><h1>Assignments</h1>
+
+    <!-- overview section -->
+    <h2>Overview</h2>
+    <p>Here are the assignment and exercise topics, weights, and due dates. I will be posting the exercise and assignment handouts here. All exercises and assignments will be submitted on <a href="http://markus.utsc.utoronto.ca/cscb20w20">MarkUs</a>. </p>
+
+    <!-- assignments section -->
+    <h2>Assignments</h2>
+    <div class="assignment-section">
+
+        <!-- content of assignment section -->
+        <h3>Assignment 1(15%): Relational Algebra and MySQL</h3>
+        <p>Part 1. Wednesday Feb. 1, 11.59pm, Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20">MarkUs</a>
+            UPDATED Part 2 and 3. For 5% bonus Saturday Feb. 11, 11.59pm or Friday Feb. 17, 11.59 Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20">MarkUs</a> You can download a dumpfile for IMDB_SMALL <a href="../static/sample.pdf">here</a>.
+To use it type "mysql -u utorid -p < IMDB_SMALL.sql"</p>
+
+        <p><a href="../static/sample.pdf">Starter Package</a></p>
+        <h3>Assignment 2(15%): HTML, CSS, PHP</h3>
+        <p>Part 1: Worth 50% Friday March. 10, 11.59pm, Submit to MarkUs
+Part 2: Worth 50% Friday March. 19, 11.59pm, Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20">MarkUs</a></p>
+
+        <p><a href="../static/sample.pdf">Starter Package</a></p>
+
+        <h3>Assignment 3(15%): Web Application and Database</h3>
+        <p>Friday March 31, 11.59pm</p>
+        <p><a href="../static/sample.pdf">Starter Package</a></p>
+    </div>
+    <!-- faq section -->
+    <h2>FAQs</h2>
+    <p>Q. If the mysql portion asks for a director or actor without specifying which attributes, what should I return</p>
+    <p>A. Return the first name, last name. </p>
+    <hr>
+    <a id="test"></a><h1>Tests</h1>
+    <p>There will be one midterm. The midterm will be 75min in length. You should go to either HW215 or HW216 depending on your last name as shown here.</p>
+    <img src="../static/midterm.png">
+    <h2>Preparing for the midterm:</h2>
+    <ul>
+        <li>Understand all parts of A1.</li>
+        <li>The midterm will cover everything on databases that we did from the start until part way through the week 6 lecture.</li>
+    </ul>
+    <p>Once you have done some preparation, you can practice on a previous midterm: <a href="../static/sample.pdf">Term Test</a></p>
+
+
+    <!-- FOOTER OF THE PAGE -->
+    <div class="footer-container">
+        <p><a href="feedback.html">Let us know what you think</a>
+		<p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+		<p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+	</div>
+</div>
+
+</body>
+</html>

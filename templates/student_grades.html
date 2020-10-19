@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+	<link rel = "stylesheet" href = "../static/student_grades.css">
+	<script src="../static/js/student_grades.js"></script>
+	<title>Student Grades</title>
+</head>
+
+<body>
+<div class="page-section">
+	
+	<img src="../static/banner.jpg">
+	
+	<!-- header of the page -->
+	<div class="link-container">
+    	<div class="link_home">
+        	<a href="student_index.html"><button class="head-anchor" type="button">Home</button></a>
+   		</div>
+    	<div class="link_news">
+        	<a href="student_news.html"><button class="head-anchor" type="button">News</button></a>
+    	</div>
+	    <div class="link_lecture">
+	        <a href = "student_lecture.html"><button class="head-anchor" type="button">Lecture</button></a>
+	    </div>
+	    <div class="link_course-works">
+	        <a href = "student_courseworks.html"><button class="head-anchor" type="button">Course Works</button></a>
+	    </div>
+	    <div class = "link_grades">
+   			<a href = "student_grades.html"><button class = "head-anchor" type = "button">Grades</button></a>
+   		</div>
+	    <div class="link_resources">
+	        <a href="student_resources.html"><button class="head-anchor" type="button">Resources</button></a>
+   		</div>
+   		<div class="link_feedback">
+   			<a href = "student_feedback.html"><button class = "head-anchor" type ="button">Feedback</button></a>
+   		</div>
+
+	</div>
+
+	<h1>Student Grades</h1>
+	
+	<div class="grades-container">
+		{%for i in range(0, grades_num)%}
+			<div class="grades-box">
+				<div class="grades-info">
+					<div class="gtitle"><b>{{grades[i][2]}} {{grades[i][5]}}</b></div>
+					<div class="ginfo"> by {{grades[i][6]}}
+					</div>
+				</div>
+				<div class="grades-grade">
+					{{grades[i][4]}}/{{grades[i][3]}}
+				</div>
+				<div class="grades-remark">
+					<button class="head-anchor" onclick="clickRegrade({{i}})" type="button">remark request</button>
+					<form method="POST" action="/student_grades" class="newgrade" id="reason{{i}}">
+            			<p><strong>Reason:</strong></p>
+                		<textarea name="reason" required></textarea>
+						<div class="newgrade">
+							<textarea name="grade_id">{{grades[i][0]}}</textarea>
+							<textarea name="instructor_id">{{grades[i][6]}}</textarea>
+						</div>
+						<button class="head-anchor" type="submit" value="">submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="break"></div>
+		{%endfor%}
+		
+	</div>
+
+	<div class="footer-container">
+		<a href="index.html">log out</a>
+		<p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+		<p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+	</div>
+</div>
+</body>
+</html>

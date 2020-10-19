@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+	<link rel = "stylesheet" href = "../static/student_feedback.css">
+	<title>Student Feedback</title>
+</head>
+
+<body>
+<div class="page-section">
+	
+	<img src="../static/banner.jpg">
+	
+	    <!-- header of the page -->
+    <div class="link-container">
+        <div class="link_home">
+            <a href="student_index.html"><button class="head-anchor" type="button">Home</button></a>
+        </div>
+        <div class="link_news">
+            <a href="student_news.html"><button class="head-anchor" type="button">News</button></a>
+        </div>
+        <div class="link_lecture">
+            <a href = "student_lecture.html"><button class="head-anchor" type="button">Lecture</button></a>
+        </div>
+        <div class="link_course-works">
+            <a href = "student_courseworks.html"><button class="head-anchor" type="button">Course Works</button></a>
+        </div>
+        <div class = "link_grades">
+            <a href = "student_grades.html"><button class = "head-anchor" type = "button">Grades</button></a>
+        </div>
+        <div class="link_resources">
+            <a href="student_resources.html"><button class="head-anchor" type="button">Resources</button></a>
+        </div>
+        <div class="link_feedback">
+            <a href = "student_feedback.html"><button class = "head-anchor" type ="button">Feedback</button></a>
+        </div>
+
+    </div>
+
+    <!-- ACTUAL CONTENT -->
+
+	<h1>Student Anonymous Feedback</h1>
+	<form method="POST" action="/student_feedback">
+		<div class="feedback-container">
+			<p><strong>({{get_flashed_messages()[0]}})Please enter the instructor ID:</strong></p>
+			<input type="text" placeholder="Please enter instructor id" name="instructor_id" required>
+			<p><strong>What do you like about the instructor teaching?</strong></p>
+			  <textarea name="fb1" placeholder="Enter here..."></textarea>
+
+			<p><strong>What do you recommend the instructor to improve their teaching?</strong></p>
+			  <textarea name="fb2" placeholder="Enter here..."></textarea>
+
+			<p><strong>What do you like about the labs?</strong></p>
+			  <textarea name="fb3" placeholder="Enter here..."></textarea>
+
+			<p><strong>What do you recommend the lab instructors to do to improve their lab teaching?</strong></p>
+			  <textarea name="fb4" placeholder="Enter here..."></textarea>
+		</div>
+		<button type="submit" id="submitbutton" class="button submitbutton">Submit</button>
+	</form>
+
+	<div class="footer-container">
+		<a href="index.html">log out</a>
+		<p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+		<p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+	</div>
+</div>
+</body>
+</html>

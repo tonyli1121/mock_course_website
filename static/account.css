@@ -1,0 +1,68 @@
+* {box-sizing: border-box}
+
+/* padding of containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  font-family: "Verdana", sans-serif;
+  display: inline-block;
+
+  background: #f1f1f1; /* grey background */
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  font-family: "Verdana", sans-serif;
+  outline: none;
+}
+
+
+/* Set a style for the submit/register button */
+.submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  font-size: 22px;
+  text-align: center;
+}
+
+
+.nope{
+    z-index: 10;
+    display:flex;
+    border:1px #ccc colid;
+    padding:3px;
+    text-align: center;
+    font-family: "Verdana", sans-serif;
+    font-size: 30px;
+    background-color: #DDDDDD;
+}
+
+h2{
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/pageTemplate.css">
+	<link rel = "stylesheet" href = "../static/student_grades.css">
+	<title>Regrade Requests</title>
+</head>
+
+<body>
+<div class="page-section">
+	<!-- BANNER of page -->
+	<img src="../static/banner.jpg">
+
+
+	<!-- header of the page -->
+	<div class="link-container">
+    	<div class="link_home">
+        	<a href="instructor_index.html"><button class="head-anchor" type="button">Home</button></a>
+   		</div>
+    	<div class="link_news">
+        	<a href="instructor_grade.html"><button class="head-anchor" type="button">Grades</button></a>
+    	</div>
+	    <div class="link_lecture">
+	        <a href = "instructor_regrade_requests.html"><button class="head-anchor" type="button">Regrade requests</button></a>
+	    </div>
+		<div class="link_resources">
+	        <a href="instructor_feedback.html"><button class="head-anchor" type="button">Feedback</button></a>
+   		</div>
+	    <div class="link_resources">
+	        <a href="instructor_news.html"><button class="head-anchor" type="button">News</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_lecture.html"><button class="head-anchor" type="button">Lecture</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_courseworks.html"><button class="head-anchor" type="button">Course Works</button></a>
+   		</div>
+		<div class="link_resources">
+	        <a href="instructor_resources.html"><button class="head-anchor" type="button">Resources</button></a>
+   		</div>
+	</div>
+
+	<!-- ACTUAL CONTENTS -->
+	<h1>Requests</h1>
+
+	<div class="grades-container">
+		{%for i in range(0, regrades_num)%}
+			<div class="grades-box">
+				<div class="grades-info">
+					<div class="gtitle"><b>{{regrades[i][4]}}</b></div>
+					<div class="ginfo">{{regrades[i][1]}},{{regrades[i][4]}} {{regrades[i][5]}}, {{regrades[i][6]}}<br/>{{regrades[i][3]}}</div>
+				</div>
+				<div class="grades-remark">
+					<a href="instructor_grade.html"><button class="head-anchor" type="button">regrade</button></a>
+				</div>
+			</div>
+			<div class="break"></div>
+		{%endfor%}
+	</div>
+
+	<div class="footer-container">
+		<a href="index.html">log out</a>
+		<p><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">UofT Faculty of Computer Science</a></p>
+		<p>Site Designed and Created by: Tianxiao(Tony) Li, Xuezhi(Jeff) Yan</p>
+	</div>
+</div>
+</body>
+</html>
